@@ -1,0 +1,1 @@
+"startDev": "nodemon ./bin/www"
