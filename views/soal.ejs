@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Avi</title>
+</head>
+
+<body>
+    <h1>Soal</h1>
+    <p>Benar : <%= benar %>
+    </p>
+    <p>Salah : <%= salah %>
+    </p>
+
+    <p>
+        <%= question.text %>
+    </p>
+    <form method="POST" action="soal/answering">
+        <% question.options.forEach((e)=> { %>
+            <input type="radio" name="ans" value="<%= e %>">
+            <label for="age1">
+                <%= e %>
+            </label><br>
+            <% }) %>
+                <br>
+                <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
