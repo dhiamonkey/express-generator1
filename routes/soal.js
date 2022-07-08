@@ -18,7 +18,7 @@ router.get("/", function (req, res, next) {
 router.post("/answering", function (req, res, next) {
   const { ans } = req.body;
   ans === question.answer ? benar++ : salah++;
-  res.redirect("/soal");
+  res.redirect(302, "/soal");
 });
 
 module.exports = router;

@@ -1,1 +1,1 @@
-"startDev": "nodemon ./bin/www"
+"dev": "nodemon ./bin/www"
