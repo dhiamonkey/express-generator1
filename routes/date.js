@@ -25,10 +25,16 @@ getStartEndOfDay(justTime);
 router.get("/", function (req, res, next) {
   res.render("date", {
     title: "Jon DateZ",
-    justTime: justTime,
-    justYesterdayTime: justYesterdayTime,
-    d0WIB: getStartEndOfDay(justTime)[0].toString(),
-    d1WIB: getStartEndOfDay(justTime)[1].toString(),
+    justTime: justTime.toLocaleString("en-US", { timeZone: "Asia/Jakarta" }),
+    justYesterdayTime: justYesterdayTime.toLocaleString("en-US", {
+      timeZone: "Asia/Jakarta",
+    }),
+    d0WIB: getStartEndOfDay(justTime)[0].toLocaleString("en-US", {
+      timeZone: "Asia/Jakarta",
+    }),
+    d1WIB: getStartEndOfDay(justTime)[1].toLocaleString("en-US", {
+      timeZone: "Asia/Jakarta",
+    }),
     d0UTC: getStartEndOfDay(justTime)[0].toUTCString(),
     d1UTC: getStartEndOfDay(justTime)[1].toUTCString(),
   });
